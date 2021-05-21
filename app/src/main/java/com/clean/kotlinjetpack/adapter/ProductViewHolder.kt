@@ -50,6 +50,10 @@ class ProductViewHolder (itemView: View) : BaseViewHolder(itemView)  {
             txtState.text="INACTIVO"
             txtState.setTextColor( ContextCompat.getColor(itemView.context,(R.color.inactive)))
         }else{
+            itemView.isEnabled=true
+            itemView.alpha=1.0f
+
+
             txtState.text="ACTIVO"
             txtState.setTextColor( ContextCompat.getColor(itemView.context,(R.color.active)))
 
