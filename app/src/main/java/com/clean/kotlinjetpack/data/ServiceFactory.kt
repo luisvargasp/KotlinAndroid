@@ -1,4 +1,4 @@
-package com.clean.kotlinjetpack
+package com.clean.kotlinjetpack.data
 
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory

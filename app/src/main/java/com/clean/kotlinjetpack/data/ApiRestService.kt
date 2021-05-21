@@ -1,5 +1,6 @@
-package com.clean.kotlinjetpack
+package com.clean.kotlinjetpack.data
 
+import com.clean.kotlinjetpack.Product
 import retrofit2.http.GET
 
 interface ApiRestService {

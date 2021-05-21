@@ -1,10 +1,12 @@
-package com.clean.kotlinjetpack
+package com.clean.kotlinjetpack.presentation.ui
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import com.clean.kotlinjetpack.BaseFragment
+import com.clean.kotlinjetpack.Product
 import com.clean.kotlinjetpack.databinding.FragmentProductDetailBinding
 import com.clean.kotlinjetpack.databinding.FragmentProductListBinding
 import com.squareup.picasso.Picasso
@@ -44,7 +46,7 @@ class ProductDetailFragment : BaseFragment() {
         super.onViewCreated(view, savedInstanceState)
 
 
-        val product:Product=ProductDetailFragmentArgs.fromBundle(requireArguments()).product
+        val product: Product =ProductDetailFragmentArgs.fromBundle(requireArguments()).product
 
         Picasso.with(context).load(product.imgUrl).resize(100,100).into(binding.imgProduct)
         binding.txtName.text=product.name

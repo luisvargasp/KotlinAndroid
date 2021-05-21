@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/productListFragment"
-        android:name="com.clean.kotlinjetpack.ProductListFragment"
+        android:name="com.clean.kotlinjetpack.presentation.ui.ProductListFragment"
         android:label="fragment_product_list"
         tools:layout="@layout/fragment_product_list" >
         <action
@@ -17,7 +17,7 @@
     </fragment>
     <fragment
         android:id="@+id/productDetailFragment"
-        android:name="com.clean.kotlinjetpack.ProductDetailFragment"
+        android:name="com.clean.kotlinjetpack.presentation.ui.ProductDetailFragment"
         android:label="fragment_product_detail"
         tools:layout="@layout/fragment_product_detail" >
         <argument

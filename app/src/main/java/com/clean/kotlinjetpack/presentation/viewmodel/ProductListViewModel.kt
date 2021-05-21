@@ -1,7 +1,9 @@
-package com.clean.kotlinjetpack
+package com.clean.kotlinjetpack.presentation.viewmodel
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.liveData
+import com.clean.kotlinjetpack.domain.GetProductsUsecase
+import com.clean.kotlinjetpack.data.ProductRepositoryImpl
 import com.clean.kotlinjetpack.Resource
 import kotlinx.coroutines.Dispatchers
 

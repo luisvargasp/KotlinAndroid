@@ -1,18 +1,19 @@
-package com.clean.kotlinjetpack
+package com.clean.kotlinjetpack.presentation.ui
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Toast
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.clean.kotlinjetpack.BaseFragment
+import com.clean.kotlinjetpack.Product
 import com.clean.kotlinjetpack.adapter.ProductAdapter
-import com.clean.kotlinjetpack.databinding.FragmentProductDetailBinding
 import com.clean.kotlinjetpack.databinding.FragmentProductListBinding
+import com.clean.kotlinjetpack.presentation.viewmodel.ProductListViewModel
 import com.clean.kotlinjetpack.util.OnDisableTimeClickListener
 import com.clean.kotlinjetpack.util.Status
 
@@ -67,7 +68,7 @@ class ProductListFragment : BaseFragment(),ProductAdapter.OnAdapter {
 
 
         binding.imgRefresh.setOnClickListener(OnDisableTimeClickListener({
-setupViewModel()
+        setupViewModel()
 
         }))
     }
@@ -79,8 +80,10 @@ setupViewModel()
 
     override fun onItemCLick(item: Product) {
       val action=ProductListFragmentDirections.listToDetail(item)
-    findNavController().navigate(action)
+         findNavController().navigate(action)
     }
+
+
     fun setupViewModel(){
         viewModel.getProducts().observe(requireActivity(), Observer {resource->
             when (resource.status) {
